@@ -1,0 +1,10 @@
+/* GENERAL */
+
+@font-face {
+    font-family: Bender;
+    src: url("assets/Jovanny\ Lemonad\ -\ Bender.otf") format("opentype");
+}
+
+body {
+    font-family: "Bender", "sans-serif";
+}
