@@ -286,7 +286,10 @@ section {
 
 .about-containers,
 .about-details-container {
+  justify-content: center;
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .about-pic {
@@ -300,13 +303,16 @@ section {
 }
 
 .details-container {
+  display: inline-block;
   padding: 1.5rem;
-  flex: 1;
   background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  max-width: 100%; /* Ensure the container doesn't grow beyond its parent */
+  word-wrap: break-word; /* Ensure long content wraps inside the container */
 }
 
 .section-container {
