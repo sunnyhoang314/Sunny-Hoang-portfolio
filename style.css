@@ -330,6 +330,7 @@ section {
 
 #experience {
   position: relative;
+  height: 60vh;
 }
 
 .experience-sub-title {
@@ -369,6 +370,7 @@ article .icon {
 
 #projects {
   position: relative;
+  height: 120vh;
 }
 
 .color-container {
@@ -398,7 +400,7 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: 30vh;
 }
 
 .contact-info-upper-container {
