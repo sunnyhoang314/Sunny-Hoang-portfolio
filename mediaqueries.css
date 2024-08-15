@@ -1,4 +1,4 @@
-@media screen and (max-width: 1618px) {
+/* @media screen and (max-width: 1618px) {
     #profile {
         height: 83vh;
         margin-bottom: 6rem;
@@ -6,10 +6,10 @@
     .about-containers {
         flex-wrap: nowrap;
     }
-}
+} */
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1540px) {
     #desktop-nav {
         display: none;
     }
