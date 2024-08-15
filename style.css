@@ -156,7 +156,7 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  height: 80vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -288,7 +288,7 @@ section {
 .about-details-container {
   justify-content: center;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 2rem;
 }
 
@@ -343,16 +343,18 @@ section {
 .experience-details-container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row; /* Changed from column to row */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 
 .article-container {
   display: flex;
   text-align: initial;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Ensure horizontal scrolling */
   flex-direction: row;
   gap: 2.5rem;
-  justify-content: space-around;
+  justify-content: flex-start; /* Align items to the start */
 }
 
 article {
@@ -370,7 +372,6 @@ article .icon {
 
 #projects {
   position: relative;
-  height: 120vh;
 }
 
 .color-container {
@@ -381,7 +382,7 @@ article .icon {
 .project-img {
   border-radius: 2rem;
   width: 90%;
-  height: 90%;
+  height: auto; /* Adjust height to maintain aspect ratio */
 }
 
 .project-title {
@@ -393,6 +394,14 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+
+.project-container {
+  display: flex;
+  flex-direction: row; /* Changed from column to row */
+  gap: 2rem; /* Adjust gap as needed */
+  flex-wrap: wrap; /* Allow wrapping to handle overflow */
+}
+
 
 /* CONTACT */ 
 
@@ -472,7 +481,6 @@ footer p {
 }
 
 .experience-details-container > .about-containers {
-  display: flex;
   animation: scroll-left 30s linear infinite;
 }
 

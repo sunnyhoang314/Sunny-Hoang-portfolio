@@ -1,10 +1,10 @@
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1618px) {
     #profile {
         height: 83vh;
         margin-bottom: 6rem;
     }
     .about-containers {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 }
 
@@ -63,7 +63,7 @@
         flex-wrap: wrap;
     }
     .contact-info-container {
-        margin: 0;
+        margin: 1;
     }
     .contact-info-container p, 
     .nav-links li a {
@@ -93,5 +93,11 @@
     }
     .text-container {
         text-align: justify;
+    }
+    .about-containers {
+        flex-wrap: nowrap;
+    }
+    .experience-details-container > .about-containers {
+        animation: scroll-left 20s linear infinite;
     }
 }
