@@ -5,7 +5,7 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
-const texts = ["undergraduate at the University of Calgary", "a programming enthusiast"];
+const texts = ["Undergraduate at the University of Calgary", "A programming enthusiast"];
 let currentTextIndex = 0;
 let charIndex = 0;
 const typingSpeed = 100;
