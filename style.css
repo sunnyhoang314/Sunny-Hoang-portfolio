@@ -344,9 +344,40 @@ section {
 .experience-details-container {
   display: flex;
   justify-content: center;
-  flex-direction: row; /* Changed from column to row */
+  flex-direction: row; /* Ensure horizontal scrolling */
   flex-wrap: nowrap; /* Prevent wrapping */
-  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  overflow: hidden; /* Prevent default scrollbar */
+  position: relative;
+  width: 100%;
+}
+
+.experience-details-container::before, .experience-details-container::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  z-index: 2;
+}
+
+.experience-details-container::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.experience-details-container::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+.experience-details-container > .about-containers {
+  display: flex;
+  flex-direction: row;
+  animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 .article-container {
@@ -355,7 +386,7 @@ section {
   flex-wrap: nowrap; /* Ensure horizontal scrolling */
   flex-direction: row;
   gap: 2.5rem;
-  justify-content: flex-start; /* Align items to the start */
+  justify-content: center; /* Align items to the start */
 }
 
 article {
@@ -398,9 +429,34 @@ article .icon {
 
 .project-container {
   display: flex;
-  flex-direction: row; /* Changed from column to row */
+  flex-direction: row; /* Ensure horizontal scrolling */
   gap: 2rem; /* Adjust gap as needed */
-  flex-wrap: wrap; /* Allow wrapping to handle overflow */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scrollbar-width: auto; /* Firefox */
+  padding-bottom: 30px; /* Add padding at the bottom for custom scrollbar */
+  scrollbar-color: rgb(53, 53, 53) rgb(250, 250, 250); /* Firefox */
+  margin-top: 2rem;
+}
+
+/* Webkit (Chrome, Safari) scrollbar styles */
+.project-container::-webkit-scrollbar {
+  height: 12px;
+}
+
+.project-container::-webkit-scrollbar-track {
+  background: rgb(250, 250, 250);
+}
+
+.project-container::-webkit-scrollbar-thumb {
+  background-color: rgb(53, 53, 53);
+  border-radius: 6px;
+  border: 3px solid rgb(250, 250, 250);
+}
+
+/* For the project containers */
+.project-container .details-container {
+  flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
 }
 
 
